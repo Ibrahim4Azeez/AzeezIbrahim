@@ -170,7 +170,7 @@ var CV_URL="cv/Ibrahim-Azeez-CV.pdf";           // e.g. "cv/Ibrahim-Azeez-CV.pdf
 var PHOTO_URL="images/ibrahim.png";
 /* ====================== */
 var BASE="https://ibrahim4azeez.github.io/AzeezIbrahim/";
-if(EMAIL){["em","em2"].forEach(function(i){var a=document.getElementById(i);a.href="mailto:"+EMAIL;a.textContent=i=="em2"?"Email: "+EMAIL:"Email"})}
+if(EMAIL){["em","em2"].forEach(function(i){var a=document.getElementById(i);a.href="https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(EMAIL);a.target="_blank";a.rel="noopener";a.textContent=i=="em2"?"Email: "+EMAIL:"Email"})}
 if(CV_URL){["cv","cv2"].forEach(function(i){var a=document.getElementById(i);a.href=CV_URL;a.setAttribute("download","")})}
 var mb=document.getElementById("mb"),mn=document.getElementById("menu");
 mb.onclick=function(){var o=mn.classList.toggle("o");mb.setAttribute("aria-expanded",o)};
@@ -265,7 +265,7 @@ var n=document.getElementById("n").value.trim(),e=document.getElementById("e").v
 var a=chk("n","en",n.length>1,"Enter your name."),b=chk("e","ee",/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e),"Enter a valid email address."),c=chk("m","em3",m.length>9,"Write a message of at least 10 characters.");
 var s=document.getElementById("fs");if(!(a&&b&&c)){s.textContent="";return}
 if(!EMAIL){s.textContent="Message is valid, but no email address is set yet. Add EMAIL in the script to enable sending.";return}
-location.href="mailto:"+EMAIL+"?subject="+encodeURIComponent("Portfolio enquiry from "+n)+"&body="+encodeURIComponent(m+"\n\nFrom: "+n+" ("+e+")");
+window.open("https://mail.google.com/mail/?view=cm&fs=1&to="+encodeURIComponent(EMAIL)+"&su="+encodeURIComponent("Portfolio enquiry from "+n)+"&body="+encodeURIComponent(m+"\n\nFrom: "+n+" ("+e+")"),"_blank");
 s.textContent="Opening your email app to send the message."};
 </script>
 </body>
