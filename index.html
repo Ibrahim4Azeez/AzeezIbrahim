@@ -144,7 +144,7 @@ ORDER BY customers DESC;</div></div>
 <h3 style="font:600 1.2rem var(--head);margin:2.5rem 0 0">Earlier dashboards</h3>
 <div class="old" id="old"></div></section>
 
-<section id="experience"><h2>Professional experience</h2><p class="sub">Dates are placeholders for you to complete.</p><div class="tl" id="tl"></div></section>
+<section id="experience"><h2>Professional experience</h2><div class="tl" id="tl"></div></section>
 
 <section id="approach"><h2>How I turn data into decisions</h2><p class="sub">Select a stage to see what I do at each step, from raw data to a business decision.</p><div class="wf" id="wf" role="tablist"></div><div class="wp" id="wp" role="tabpanel" aria-live="polite"></div></section>
 
@@ -247,11 +247,11 @@ return '<details class="cs"><summary><div><h3>'+p.t+'</h3><div class="t">'+p.c.m
 document.getElementById("fl").onclick=function(e){if(e.target.dataset.t){cur=e.target.dataset.t;render()}};render();
 document.getElementById("old").innerHTML=[["Money Heist","Viewer ratings, Power BI","Money Heist.html"],["Domestic Violence","70-country survey","Domestic Violence.html"],["Pie Bakery","Business insight","Pie Bakery.html"],["Divvy Bikes","Casual vs subscribed riders","Divvy_bikes.html"],["Call Centre","Customer and agent trends","Call_Centre.html"],["Sales Data","Sales analysis","Sales Data.html"]].map(function(x){return '<a href="'+BASE+x[2]+'">'+x[0]+'<small>'+x[1]+'</small></a>'}).join("");
 
-var EX=[["Data Analyst","The Alternative Bank","[dates]",["SQL-based data extraction and analysis","Business intelligence dashboards","Data pipeline and ETL activities","Automation of reporting processes","Business performance analysis and stakeholder reporting","Data-driven recommendations","Collaboration with business and technology teams"]],
-["Sales Analyst","Plus Marketing","[dates]",["Sales performance analysis","Reporting and business insights"]],
-["Senior Project Executive","Octoplus Marketing, Dakar, Senegal","[dates]",["Experiential marketing and FMCG campaign execution","Team coordination","Performance tracking"]]];
+var EX=[["Data Analyst","The Alternative Bank","2024 - Present",["SQL-based data extraction and analysis","Business intelligence dashboards","Data pipeline and ETL activities","Automation of reporting processes","Business performance analysis and stakeholder reporting","Data-driven recommendations","Collaboration with business and technology teams"]],
+["Sales Analyst","Plus Marketing","2021 - 20222",["Sales performance analysis","Reporting and business insights"]],
+["Senior Project Executive","Octoplus Marketing, Dakar, Senegal","2022 - 2024",["Experiential marketing and FMCG campaign execution","Team coordination","Performance tracking"]]];
 document.getElementById("tl").innerHTML=EX.map(function(x){return '<div><h3>'+x[0]+'</h3><div class="m">'+x[1]+' · '+ph(x[2])+'</div><ul>'+x[3].map(function(b){return "<li>"+b+"</li>"}).join("")+'</ul></div>'}).join("");
-document.getElementById("ed").innerHTML=[["Microsoft Azure Data Fundamentals","Certification","[year]"],["Higher National Diploma, Statistics","[institution]","[year]"],["National Diploma, Mathematics and Statistics","[institution]","[year]"],["Other professional training","[add course names]","[year]"]].map(function(x){return '<div><h3>'+x[0]+'</h3><div class="m">'+ph(x[1]+' · '+x[2])+'</div></div>'}).join("");
+document.getElementById("ed").innerHTML=[["Post Graduate Diploma in Management","Ahmadu Bello University","2025"],["Higher National Diploma, Statistics","Moshood Abiola Polytechnic","2019"],["National Diploma, Mathematics and Statistics","Moshood Abiola Polytechnic","2015"],["Microsoft Azure Data Fundamentals","Certification","2023"],["Google Data Analytics Certificate","[Cousera]","[2022]"]].map(function(x){return '<div><h3>'+x[0]+'</h3><div class="m">'+ph(x[1]+' · '+x[2])+'</div></div>'}).join("");
 
 var WF=[["Requirements","I meet stakeholders to agree the decision they need to make, the KPIs that matter and who will use the output."],["Extraction","I pull the data I need with SQL from banking and fintech sources such as PostgreSQL, Oracle and Trino."],["Cleaning","I fix duplicates, gaps and inconsistent formats with Power Query and Python so the numbers can be trusted."],["Modelling","I structure the data into clean tables and relationships, so measures calculate correctly and quickly."],["Dashboards","I build interactive dashboards in Power BI or Superset that answer the agreed questions first."],["KPI monitoring","I set up the KPIs to be tracked over time against targets and previous periods."],["Reporting","I automate recurring reports so stakeholders receive them on schedule without manual work."],["Insights","I explain what changed and why, in plain language, not just charts."],["Recommendations","I finish with actions the business can take, so the analysis leads to a decision."]];
 var wf=document.getElementById("wf"),wp=document.getElementById("wp");
